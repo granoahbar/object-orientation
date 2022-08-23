@@ -4,7 +4,11 @@
   Give it a key of name with the value being your name, and another key of age with the value being your age.
 */
 
-//Code here
+let me = 
+{
+  name: 'Noah',
+  age: 24
+}
 
 
 
@@ -15,21 +19,27 @@
 //name (a string), color (a string), age (a number),
 //and goodBoy/goodGirl (a boolean).
 
-//Code here
+let Dog = 
+{
+  name: 'Stitch',
+  color: 'Black',
+  age: '10',
+  goodgirl: true 
+}
 
 
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
-//Code here
+console.log (Dog.name)
 
 
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
-//Code here
+console.log (Dog['color'])
 
 
 
@@ -39,14 +49,24 @@
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
 
-//Code here
+let favoriteThings =
+{
+  band: 'M83',
+  food: 'Burger',
+  person: 'Bob',
+  book: 'Faith is not blind',
+  movie: 'Hunt For the Wilder People',
+  holiday: '4th of July'
+}
 
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
 */
 
-//Code here
+favoriteThings.car = 'Ranger'
+favoriteThings.show = 'Schits Creek'
+// console.log (favoriteThings)
 
 
 /*
@@ -54,7 +74,9 @@
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'. (If they were either of those things already, change them to something else.)
 */
 
-//Code here
+favoriteThings.food = 'Chicken Nuggets'
+favoriteThings.book = 'Harry Potter'
+// console.log (favoriteThings)
 
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
@@ -72,8 +94,8 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
-
+let {color, make, model, year} = carDetails
+console.log (color, make, model, year)
 
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
@@ -85,13 +107,14 @@ var carDetails = {
 */
 
 function greeting( obj ) {
-  //Code Here
-  
+  let {title, firstName, lastName} = obj
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
-
+let myObj = {title: 'Mr.',  firstName: 'Noah', lastName: 'Humphreys'}
+console.log (greeting(myObj))
 
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
@@ -104,9 +127,12 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
-
-
+function totalPopulation (obj){
+  let {utah, california, texas, arizona} = obj
+  return utah + california + texas + arizona;
+}
+let statesObj = {utah: 80, california: 120, texas: 100, arizona: 60}
+console.log (totalPopulation(statesObj))
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -118,8 +144,13 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+function ingredients (obj){
+  let{carb, fat, protein} = obj
+  return [carb, fat, protein]
+}
 
+let macrosObj = {carb: '200', fat: '100', protein: '300'}
+console.log(ingredients(macrosObj))
 
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
